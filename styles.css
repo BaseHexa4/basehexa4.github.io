@@ -164,7 +164,7 @@
     }
 
     .first-page .first-welcome h4 {
-        animation: fade-in-top 1.5s ease;
+        animation: fade-in-top 1.8s ease;
         font-size: 4vw;
         z-index: 4;
         font-weight: bold;
