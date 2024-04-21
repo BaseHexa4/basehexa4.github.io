@@ -11,28 +11,28 @@
     let startX = 0;
     let scrollLeft = 0;
     let isDown = false;
-    
+
     // Mouse events
     list.addEventListener('mousedown', startDrag);
     list.addEventListener('mouseleave', endDrag);
     list.addEventListener('mouseup', endDrag);
     list.addEventListener('mousemove', drag);
-    
+
     // Touch events
     list.addEventListener('touchstart', startDrag);
     list.addEventListener('touchend', endDrag);
     list.addEventListener('touchmove', drag);
-    
+
     function startDrag(e) {
         isDown = true;
         startX = e.type === 'mousedown' ? e.pageX : e.touches[0].pageX;
         scrollLeft = list.scrollLeft;
     }
-    
+
     function endDrag() {
         isDown = false;
     }
-    
+
     function drag(e) {
         if (!isDown) return;
         e.preventDefault();
@@ -42,9 +42,9 @@
     }
 })()
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     var overlay = document.querySelector('.loading-screen');
     var body = this.document.querySelector('body')
     body.style.overflowY = 'auto'
     overlay.style.display = 'none';
-  });
+});

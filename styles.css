@@ -22,6 +22,18 @@
     }
 }
 
+@keyframes fade-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 @keyframes fade-in-out {
     0% {
         transform: scale(1);
@@ -36,7 +48,71 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (orientation: portrait) {
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        background-color: #373636;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+    }
+
+    .left-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 50%;
+    }
+
+    .loading-screen {
+        top: -9999px;
+        /* Move off-screen */
+        left: -9999px;
+        position: absolute;
+    }
+
+    .first-page {
+        top: -9999px;
+        /* Move off-screen */
+        left: -9999px;
+        position: absolute;
+    }
+
+    .second-page {
+        top: -9999px;
+        /* Move off-screen */
+        left: -9999px;
+        position: absolute;
+    }
+    .third-page {
+        top: -9999px;
+        /* Move off-screen */
+        left: -9999px;
+        position: absolute;
+    }
+
+    .topbar {
+        top: -9999px;
+        /* Move off-screen */
+        left: -9999px;
+        position: absolute;
+    }
+
+}
+
+@media screen and (orientation: landscape) {
 
     *,
     ::after,
@@ -92,8 +168,8 @@
         display: flex;
         z-index: 999;
         position: fixed;
-        width: 12vw;
-        height: 10vw;
+        width: 10vw;
+        height: 11vw;
         margin-bottom: 10px;
     }
 
@@ -102,7 +178,7 @@
         height: 2vw;
         position: relative;
         border: 0.15vw solid #fff;
-        margin-left: 11%;
+        margin-left: 15%;
         border-radius: 360px;
         background-color: transparent;
         justify-content: start;
@@ -276,6 +352,7 @@
     }
 
     .second-page h4 {
+        animation: fade-in-right 1.5s ease;
         margin-bottom: 0;
         margin-left: 1vw;
         margin-right: 3vw;
@@ -297,7 +374,7 @@
     }
 
     .second-page .yellow-line {
-        background-color: #FEC64D;
+        background-image: url('./secondpage/border-vertical.png');
         width: .5%;
         height: 100%;
     }
@@ -353,5 +430,176 @@
         font-size: 1.5vw;
         padding-left: .5vw;
         padding-right: .5vw;
+    }
+
+    .third-page {
+        background-color: #373636;
+        position: relative;
+        background-size: cover;
+        aspect-ratio: 16 / 9;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .third-page #title-view::before {
+        content: "";
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 125%;
+        height: 133%;
+        z-index: -1;
+        background-image: url('./thirdpage/design-a.svg');
+        background-repeat: no-repeat;
+        background-color: #242323;
+        background-size: cover;
+        transform: rotate(270deg);
+    }
+
+    .third-page #title-view {
+        z-index: 1;
+        color: #FFF;
+        position: relative;
+        background-size: cover;
+        width: 60%;
+        /* Set the width and height to cover the entire container */
+        height: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .third-page .yellow-line {
+        background-image: url('./thirdpage/border-vertical.png');
+        width: .5%;
+        height: 100%;
+    }
+
+    .third-page #title-view h1 {
+        position: relative;
+        z-index: 2;
+        top: -5%;
+        font-size: 7vw;
+        font-family: 'Barlow Condensed', sans-serif;
+        color: #F9A72C;
+    }
+    .third-page #title-view p {
+        position: absolute;
+        z-index: 2;
+        top: 10vw;
+        width: 40vw;
+        font-size: 1.5vw;
+        font-family: 'Arsenal', sans-serif;
+        color: #FFF;
+    }
+
+ 
+    .third-page .esmeralda {
+        z-index: 1;
+        left: -28vw;
+        bottom: -8vw;
+        position: absolute;
+        width: 80vw;
+        height: 50vw;
+    }
+
+    .third-page .yellow-light {
+        z-index: 1;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        height: 35vw;
+    }
+        .third-page #title-view {
+        z-index: 1;
+        color: #FFF;
+        position: relative;
+        background-size: cover;
+        width: 60%;
+        /* Set the width and height to cover the entire container */
+        height: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .fourth-page {
+        background-color: #373636;
+        position: relative;
+        background-size: cover;
+        aspect-ratio: 16 / 9;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .fourth-page #title-view {
+        z-index: 1;
+        color: #FFF;
+        position: relative;
+        background-size: cover;
+        width: 40%;
+        /* Set the width and height to cover the entire container */
+        height: 100%;
+        display: flex;
+        overflow: hidden;
+        flex-direction:column;
+    }
+
+    .fourth-page .yellow-line {
+        width: .5%;
+        height: 100%;
+        background-image: url('./fourthpage/border-vertical.png');
+    }
+
+    .fourth-page .banner-top::before {
+        z-index: 2;
+        content: "";
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100%;
+        font-weight: bold;
+        background-size: 150%; 
+        background-color: rgba(254,198,77,0.2);
+    }
+
+    .fourth-page .banner-top {
+        z-index: 1;
+        font-family: 'Barlow Condensed', sans-serif;
+        position: relative;
+        width: 100%;
+        top: 0;
+        height: 25%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: bold;
+        background-image: url('./fourthpage/gridlines.png');
+        background-size: 150%; 
+        background-color: #545454;
+    }
+
+    .fourth-page .yellow-light {
+        width: 100%;
+        position: relative;
+        height: 1%;
+        background-color:rgba(254,198,77,0.8);
+        background-repeat: no-repeat;
+        background-size: 200%;
+        background-image: url('./fourthpage/border-horizonal.svg');
+    }
+    .fourth-page .banner-top span {
+        font-size: 4.5vw;
+    }
+
+    .fourth-page .content {
+        width: 100%;
+        height: 100%;
+        background-color: #545454;
+        background-image: url('./fourthpage/golden-animation.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
