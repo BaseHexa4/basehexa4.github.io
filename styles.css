@@ -96,6 +96,7 @@
         left: -9999px;
         position: absolute;
     }
+
     .third-page {
         top: -9999px;
         /* Move off-screen */
@@ -172,39 +173,6 @@
         height: 11vw;
         margin-bottom: 10px;
     }
-
-    .topbar .search-container {
-        width: 20vw;
-        height: 2vw;
-        position: relative;
-        border: 0.15vw solid #fff;
-        margin-left: 15%;
-        border-radius: 360px;
-        background-color: transparent;
-        justify-content: start;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-
-    }
-
-    .topbar .search-container img {
-        margin-left: 2%;
-        width: 2vw;
-        height: 2vw;
-    }
-
-    .topbar .search-container input[type="text"] {
-        width: calc(100vw - 40px);
-        padding-left: 3%;
-        border: none;
-        outline: none;
-        background-color: transparent;
-        font-size: 1vw;
-        color: white;
-        border-radius: 20px;
-    }
-
 
     .first-page .roger {
         z-index: 1;
@@ -289,12 +257,14 @@
         color: #FFF;
     }
 
-    .first-page .signup {
+    .first-page .visitpage {
         animation: fade-in-left 1.5s ease;
+        font-family: 'Helvetica World', Arial, sans-serif;
         background-color: #FEC64D;
         position: absolute;
         right: 5%;
-        font-size: 1.2vw;
+        font-size: 1.8vw;
+        font-weight: bold;
         color: #FFF;
         width: 15vw;
         height: 5vw;
@@ -302,7 +272,7 @@
         bottom: 15%;
     }
 
-    .first-page .signup-p {
+    .first-page .visit-p {
         color: #FFF;
         font-family: 'Arsenal', sans-serif;
         position: absolute;
@@ -483,6 +453,7 @@
         font-family: 'Barlow Condensed', sans-serif;
         color: #F9A72C;
     }
+
     .third-page #title-view p {
         position: absolute;
         z-index: 2;
@@ -493,7 +464,7 @@
         color: #FFF;
     }
 
- 
+
     .third-page .esmeralda {
         z-index: 1;
         left: -28vw;
@@ -510,7 +481,8 @@
         width: 100%;
         height: 35vw;
     }
-        .third-page #title-view {
+
+    .third-page #title-view {
         z-index: 1;
         color: #FFF;
         position: relative;
@@ -522,6 +494,47 @@
         align-content: center;
         justify-content: center;
         overflow: hidden;
+    }
+
+    .third-page .map-view {
+        width: 39.5%;
+        height: 100%;
+        background-color: #242323;
+        background-image: url('./thirdpage/map.png');
+        background-size: 90%;
+        background-repeat: no-repeat;
+    }
+    .third-page .luzon {
+        width: 0%;
+        height: 0%;
+        position: relative;
+        background-image: url('./thirdpage/luzon.png');
+        background-size: 97%;
+        top: -25px;
+        left: -17px;
+        background-repeat: no-repeat;
+    }
+    .third-page .visayas {
+        width: 0%;
+        height: 0%;
+        position: relative;
+        background-image: url('./thirdpage/visayas.png');
+        background-size: 97%;
+        top: -25px;
+        left: -17px;
+        background-repeat: no-repeat;
+    }
+
+    .third-page .mindanao {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        padding-bottom: 20px;
+        background-image: url('./thirdpage/mindanao.png');
+        background-size: 95%;
+        top: -10px;
+        left: -11px;
+        background-repeat: no-repeat;
     }
 
     .fourth-page {
@@ -543,11 +556,12 @@
         height: 100%;
         display: flex;
         overflow: hidden;
-        flex-direction:column;
+        flex-direction: column;
     }
 
     .fourth-page .yellow-line {
         width: .5%;
+        z-index: 1;
         height: 100%;
         background-image: url('./fourthpage/border-vertical.png');
     }
@@ -561,8 +575,8 @@
         left: 0;
         height: 100%;
         font-weight: bold;
-        background-size: 150%; 
-        background-color: rgba(254,198,77,0.2);
+        background-size: 150%;
+        background-color: rgba(254, 198, 77, 0.2);
     }
 
     .fourth-page .banner-top {
@@ -571,25 +585,26 @@
         position: relative;
         width: 100%;
         top: 0;
-        height: 25%;
+        height: 30%;
         align-content: center;
         justify-content: center;
         text-align: center;
         font-weight: bold;
         background-image: url('./fourthpage/gridlines.png');
-        background-size: 150%; 
+        background-size: 150%;
         background-color: #545454;
     }
 
-    .fourth-page .yellow-light {
+    .fourth-page .yellow-hline {
         width: 100%;
         position: relative;
         height: 1%;
-        background-color:rgba(254,198,77,0.8);
+        background-color: rgba(254, 198, 77, 0.8);
         background-repeat: no-repeat;
         background-size: 200%;
         background-image: url('./fourthpage/border-horizonal.svg');
     }
+
     .fourth-page .banner-top span {
         font-size: 4.5vw;
     }
@@ -598,8 +613,32 @@
         width: 100%;
         height: 100%;
         background-color: #545454;
-        background-image: url('./fourthpage/golden-animation.gif');
+        background-image: url('');
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+    .fourth-page .side-view {
+        width: 59.5%;
+        height: 100%;
+        background-image: url('./fourthpage//design-a.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .fourth-page .layla {
+        transform: scaleX(-1);
+        position: absolute;
+        height: 70vw;
+        left: 10vw;
+        bottom: -10vw;
+    }
+
+    .fourth-page .yellow-light {
+        z-index: 1;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        height: 38vw;
     }
 }
