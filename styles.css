@@ -498,45 +498,49 @@
 
     .third-page .map-view {
         width: 39.5%;
-        height: 100%;
+        height: 100%;   
         background-color: #242323;
         background-image: url('./thirdpage/map.png');
-        background-size: 90%;
+        background-size: contain;
         background-repeat: no-repeat;
+    }
+    .third-page .luzon:hover {
+        opacity: 100;
     }
     .third-page .luzon {
-        width: 0%;
-        height: 0%;
-        position: relative;
-        background-image: url('./thirdpage/luzon.png');
-        background-size: 97%;
-        top: -25px;
-        left: -17px;
-        background-repeat: no-repeat;
+        opacity: 0;
+        width: 26vw;
+        height: 41vw;
+        z-index: 50;
+        position:relative;
+        top: 5.7vw;
+        left: 1.5vw;
     }
+    .third-page .visayas:hover {
+        opacity: 100;
+    }
+
     .third-page .visayas {
-        width: 0%;
-        height: 0%;
-        position: relative;
-        background-image: url('./thirdpage/visayas.png');
-        background-size: 97%;
-        top: -25px;
-        left: -17px;
-        background-repeat: no-repeat;
+        opacity: 0;
+        width: 14.3vw;
+        height: 14vw;
+        z-index: 55;
+        position:relative;
+        top: -14.9vw;
+        right: -16.3vw;
     }
-
+    .third-page .mindanao:hover {
+        opacity: 100;
+    }
     .third-page .mindanao {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        padding-bottom: 20px;
-        background-image: url('./thirdpage/mindanao.png');
-        background-size: 95%;
-        top: -10px;
-        left: -11px;
-        background-repeat: no-repeat;
+        opacity: 0;
+        width: 20.7vw;
+        height: 15vw;
+        z-index: 60;
+        position:relative;
+        top: -4.5vw;
+        right: 1.5vw;
     }
-
     .fourth-page {
         background-color: #373636;
         position: relative;
@@ -613,9 +617,9 @@
         width: 100%;
         height: 100%;
         background-color: #545454;
-        background-image: url('');
+        background-image: url('./fourthpage/golden-animation.gif');
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 120%;
     }
 
     .fourth-page .side-view {
