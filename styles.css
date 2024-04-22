@@ -69,6 +69,7 @@
 
     .left-logo {
         position: absolute;
+        z-index: 9999;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -270,7 +271,7 @@
         background-color: #FEC64D;
         position: absolute;
         right: 5%;
-        font-size: 1.8vw;
+        font-size: 1.4vw;
         font-weight: bold;
         color: #FFF;
         width: 15vw;
@@ -285,7 +286,7 @@
         position: absolute;
         right: 5%;
         height: 3%;
-        bottom: 28%;
+        bottom: 32%;
         width: 30%;
         font-size: 1.8vw;
     }
@@ -418,7 +419,7 @@
         overflow: hidden;
     }
 
-    .third-page #title-view::before {
+    .third-page .title-view::before {
         content: "";
         position: absolute;
         transform: translate(-50%, -50%);
@@ -432,13 +433,12 @@
         transform: rotate(270deg);
     }
 
-    .third-page #title-view {
+    .third-page .title-view {
         z-index: 1;
         color: #FFF;
         position: relative;
         background-size: cover;
         width: 60%;
-        /* Set the width and height to cover the entire container */
         height: 100%;
         display: flex;
         align-content: center;
@@ -452,7 +452,7 @@
         height: 100%;
     }
 
-    .third-page #title-view h1 {
+    .third-page h1 {
         position: relative;
         z-index: 2;
         top: -5%;
@@ -461,16 +461,15 @@
         color: #F9A72C;
     }
 
-    .third-page #title-view p {
+    .third-page p {
         position: absolute;
-        z-index: 2;
+        z-index: 7;
         top: 10vw;
         width: 40vw;
         font-size: 1.5vw;
         font-family: 'Arsenal', sans-serif;
         color: #FFF;
     }
-
 
     .third-page .esmeralda {
         z-index: 1;
@@ -489,13 +488,13 @@
         height: 35vw;
     }
 
-    .third-page #title-view {
-        z-index: 1;
+    .third-page .luzonarea {
+        opacity: 0;
+        z-index: 3;
         color: #FFF;
-        position: relative;
-        background-size: cover;
+        position: absolute;
+        background-color: #FFF;
         width: 60%;
-        /* Set the width and height to cover the entire container */
         height: 100%;
         display: flex;
         align-content: center;
@@ -503,51 +502,232 @@
         overflow: hidden;
     }
 
+    .third-page .luzonarea::before {
+        content: "";
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 125%;
+        height: 133%;
+        z-index: -999;
+        background-image: url('./thirdpage/design-a.svg');
+        background-repeat: no-repeat;
+        background-color: #242323;
+        background-size: cover;
+        transform: rotate(270deg);
+    }
+
+    .third-page .luzonarea #HA {
+        position: absolute;
+        z-index: 99999;
+        left: 2vw;
+        top: 14vw;
+        font-size: 2.5vw;
+        font-family: 'Barlow Condensed', sans-serif;
+        color: #F9A72C;
+    }
+
+    .third-page .luzonarea #A {
+        position: absolute;
+        z-index: 2;
+        left: 2.3vw;
+        top: 18vw;
+        width: 40vw;
+        font-size: 1.2vw;
+        font-family: 'Arsenal', sans-serif;
+        color: #FFF;
+    }
+
+    .third-page .luzonarea #HB {
+        position: absolute;
+        z-index: 99999;
+        left: 2vw;
+        top: 32vw;
+        font-size: 2.5vw;
+        font-family: 'Barlow Condensed', sans-serif;
+        color: #F9A72C;
+    }
+
+    .third-page .luzonarea #B {
+        position: absolute;
+        z-index: 2;
+        left: 2.3vw;
+        top: 36vw;
+        width: 40vw;
+        font-size: 1.2vw;
+        font-family: 'Arsenal', sans-serif;
+        color: #FFF;
+    }
+
+    .third-page .luzonarea #HC {
+        position: absolute;
+        z-index: 99999;
+        left: 35vw;
+        top: 14vw;
+        font-size: 2.5vw;
+        font-family: 'Barlow Condensed', sans-serif;
+        color: #F9A72C;
+    }
+
+    .third-page .luzonarea #C {
+        position: absolute;
+        z-index: 2;
+        left: 35.3vw;
+        top: 18vw;
+        width: 40vw;
+        font-size: 1.2vw;
+        font-family: 'Arsenal', sans-serif;
+        color: #FFF;
+    }
+
+    .third-page .visayasarea {
+        opacity: 0;
+        z-index: 10;
+        color: #FFF;
+        position: absolute;
+        background-color: #FFF;
+        width: 60%;
+        height: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .third-page .visayasarea::before {
+        content: "";
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 125%;
+        height: 133%;
+        z-index: -999;
+        background-image: url('./thirdpage/design-a.svg');
+        background-repeat: no-repeat;
+        background-color: #242323;
+        background-size: cover;
+        transform: rotate(270deg);
+    }
+
+    .third-page .visayasarea h3 {
+        position: absolute;
+        z-index: 3;
+        left: 6vw;
+        top: 15vw;
+        font-size: 5vw;
+        font-family: 'Barlow Condensed', sans-serif;
+        color: #F9A72C;
+    }
+
+    .third-page .visayasarea h5 {
+        position: absolute;
+        z-index: 2;
+        left: 8vw;
+        top: 25vw;
+        width: 40vw;
+        font-size: 1.5vw;
+        font-family: 'Arsenal', sans-serif;
+        color: #FFF;
+    }
+
+    .third-page .mindanaoarea {
+        opacity: 0;
+        z-index: 10;
+        color: #FFF;
+        position: absolute;
+        background-color: #FFF;
+        width: 60%;
+        height: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .third-page .mindanaoarea::before {
+        content: "";
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 125%;
+        height: 133%;
+        z-index: -999;
+        background-image: url('./thirdpage/design-a.svg');
+        background-repeat: no-repeat;
+        background-color: #242323;
+        background-size: cover;
+        transform: rotate(270deg);
+    }
+
+    .third-page .mindanaoarea h3 {
+        position: absolute;
+        z-index: 3;
+        left: 6vw;
+        top: 15vw;
+        font-size: 5vw;
+        font-family: 'Barlow Condensed', sans-serif;
+        color: #F9A72C;
+    }
+
+    .third-page .mindanaoarea h5 {
+        position: absolute;
+        z-index: 2;
+        left: 8vw;
+        top: 25vw;
+        width: 40vw;
+        font-size: 1.5vw;
+        font-family: 'Arsenal', sans-serif;
+        color: #FFF;
+    }
+
     .third-page .map-view {
         width: 39.5%;
-        height: 100%;   
+        height: 100%;
         background-color: #242323;
         background-image: url('./thirdpage/map.png');
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
     }
+
     .third-page .luzon:hover {
         opacity: 100;
     }
+
     .third-page .luzon {
         opacity: 0;
-        width: 26vw;
-        height: 41vw;
+        width: 29.5vw;
+        height: 45.8vw;
         z-index: 50;
-        position:relative;
-        top: 5.7vw;
+        position: relative;
+        top: 6.6vw;
         left: 1.5vw;
     }
+
     .third-page .visayas:hover {
         opacity: 100;
     }
 
     .third-page .visayas {
         opacity: 0;
-        width: 14.3vw;
-        height: 14vw;
+        width: 16.2vw;
+        height: 16.3vw;
         z-index: 55;
-        position:relative;
-        top: -14.9vw;
-        right: -16.3vw;
+        position: relative;
+        top: -15.7vw;
+        right: -18.2vw;
     }
+
     .third-page .mindanao:hover {
         opacity: 100;
     }
+
     .third-page .mindanao {
         opacity: 0;
-        width: 20.7vw;
-        height: 15vw;
+        width: 23.1vw;
+        height: 16.8vw;
         z-index: 60;
-        position:relative;
-        top: -4.5vw;
-        right: 1.5vw;
+        position: relative;
+        top: -21.2vw;
+        right: -14.9vw;
     }
+
     .fourth-page {
         background-color: #373636;
         position: relative;

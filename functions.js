@@ -47,4 +47,31 @@ window.addEventListener('load', function () {
     var body = this.document.querySelector('body')
     body.style.overflowY = 'auto'
     overlay.style.display = 'none';
+
+    const luzonhover = document.querySelector('.third-page .luzon');
+    const luzonarea = document.querySelector('.third-page .luzonarea');
+    const visayashover = document.querySelector('.third-page .visayas');
+    const visayasarea = document.querySelector('.third-page .visayasarea');
+    const mindanaohover = document.querySelector('.third-page .mindanao');
+    const mindanaoarea = document.querySelector('.third-page .mindanaoarea');
+
+
+    luzonhover.addEventListener('mouseover', function() {
+        luzonarea.style.opacity = 100;
+    });
+    luzonhover.addEventListener('mouseout', function() {
+        luzonarea.style.opacity = 0;
+    });
+    visayashover.addEventListener('mouseover', function() {
+        visayasarea.style.opacity = 100;
+    });
+    visayashover.addEventListener('mouseout', function() {
+        visayasarea.style.opacity = 0;
+    });
+    mindanaohover.addEventListener('mouseover', function() {
+        mindanaoarea.style.opacity = 100;
+    });
+    mindanaohover.addEventListener('mouseout', function() {
+        mindanaoarea.style.opacity = 0;
+    });
 });
