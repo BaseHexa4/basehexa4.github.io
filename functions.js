@@ -48,6 +48,7 @@ window.addEventListener('load', function () {
     body.style.overflowY = 'auto'
     overlay.style.display = 'none';
 
+    /*map*/
     const luzonhover = document.querySelector('.third-page .luzon');
     const luzonarea = document.querySelector('.third-page .luzonarea');
     const visayashover = document.querySelector('.third-page .visayas');
@@ -74,4 +75,11 @@ window.addEventListener('load', function () {
     mindanaohover.addEventListener('mouseout', function() {
         mindanaoarea.style.opacity = 0;
     });
+    /*map*/
+
+    const video = document.querySelector('.fifth-page .video');
+    video.oncanplaythrough = function() {
+        video.play();
+        video.playbackRate = 1;
+    };
 });

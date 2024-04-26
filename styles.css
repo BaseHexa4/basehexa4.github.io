@@ -48,7 +48,7 @@
     }
 }
 
-@media screen and (orientation: portrait) {
+/*@media screen and (orientation: portrait) {
 
     *,
     ::after,
@@ -79,49 +79,43 @@
 
     .loading-screen {
         top: -9999px;
-        /* Move off-screen */
         left: -9999px;
         position: absolute;
     }
 
     .first-page {
         top: -9999px;
-        /* Move off-screen */
         left: -9999px;
         position: absolute;
     }
 
     .second-page {
         top: -9999px;
-        /* Move off-screen */
         left: -9999px;
         position: absolute;
     }
 
     .third-page {
         top: -9999px;
-        /* Move off-screen */
         left: -9999px;
         position: absolute;
     }
 
     .fourth-page {
         top: -9999px;
-        /* Move off-screen */
         left: -9999px;
         position: absolute;
     }
 
     .topbar {
         top: -9999px;
-        /* Move off-screen */
         left: -9999px;
         position: absolute;
     }
 
-}
+}*/
 
-@media screen and (orientation: landscape) {
+@media screen {
 
     *,
     ::after,
@@ -178,7 +172,7 @@
         z-index: 999;
         position: fixed;
         width: 10vw;
-        height: 11vw;
+        height: 10vw;
         margin-bottom: 10px;
     }
 
@@ -265,11 +259,16 @@
         color: #FFF;
     }
 
+    .first-page .visitpage:hover {
+        filter: brightness(110%);
+    }
+
     .first-page .visitpage {
         animation: fade-in-left 1.5s ease;
         font-family: 'Helvetica World', Arial, sans-serif;
         background-color: #FEC64D;
         position: absolute;
+        z-index: 8888;
         right: 5%;
         font-size: 1.4vw;
         font-weight: bold;
@@ -771,12 +770,12 @@
     }
 
     .fourth-page .banner-top {
-        z-index: 1;
+        z-index: 4;
         font-family: 'Barlow Condensed', sans-serif;
         position: relative;
         width: 100%;
         top: 0;
-        height: 30%;
+        height: 20%;
         align-content: center;
         justify-content: center;
         text-align: center;
@@ -790,6 +789,8 @@
         width: 100%;
         position: relative;
         height: 1%;
+        top: 0;
+        z-index: 5;
         background-color: rgba(254, 198, 77, 0.8);
         background-repeat: no-repeat;
         background-size: 200%;
@@ -801,14 +802,65 @@
     }
 
     .fourth-page .content {
+        position: absolute;
         width: 100%;
         height: 100%;
-        background-color: #545454;
-        background-image: url('./fourthpage/golden-animation.gif');
+        background-color: rgba(254, 198, 77, 1);
         background-repeat: no-repeat;
-        background-size: 120%;
+        background-size: cover;
+        z-index: 1;
     }
 
+    .fourth-page .chborder {
+        width: 18vw;
+        height: 17vw;
+        bottom: 0;
+        position: absolute;
+        bottom: -9vw;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .fourth-page .blockview {
+        background-color: rgba(55, 55, 44, 0.8);
+        width: 97%;
+        left: 0.6vw;
+        height: 50%;
+        border-radius: 1.2vw;
+        margin-top: 12.3vw;
+        position: absolute;
+    }
+
+    .fourth-page .blockview .jointitle {
+        position: absolute;
+        left: 5vw;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        top: 3vw;
+        transform: scaleX(1.25);
+        color: #FFF;
+        font-family: 'Arsenal', sans-serif;
+        font-weight: normal;
+        font-size: 1.4vw;
+    }
+
+    .fourth-page .applych {
+        font-family: 'Helvetica World', Arial, sans-serif;
+        background-color: #242323;
+        position: absolute;
+        z-index: 8888;
+        right: 50%;
+        transform: translate(50%,0);
+        font-size: 0.8vw;
+        font-weight: bold;
+        color: #FFF;
+        width: 8vw;
+        height: 4vw;
+        border-color: #FFF;
+        border-radius: 3vw;
+        bottom: 5%;
+    }
     .fourth-page .side-view {
         width: 59.5%;
         height: 100%;
@@ -822,7 +874,7 @@
         position: absolute;
         height: 70vw;
         left: 10vw;
-        bottom: -10vw;
+        bottom: -14vw;
     }
 
     .fourth-page .yellow-light {
@@ -831,5 +883,272 @@
         position: absolute;
         width: 100%;
         height: 38vw;
+    }
+
+    .fifth-page {
+        padding: 0;
+        background-color: #373636;
+        background-image: url('fifthpage/background.png');
+        position: relative;
+        background-size: cover;
+        aspect-ratio: 16 / 9;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .fifth-page .video {
+        position: relative;
+        max-width: 100%;
+        width: 100%;
+        object-fit: fill;
+        display: block;
+        height: 81%;
+        top: 5.64vw;
+    }
+
+    .fifth-page .headlogo {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 28vw;
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .fifth-page .chtitle {
+        position: absolute;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        left: 65vw;
+        color: #FFF;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: bold;
+        font-size: 7vw;
+    }
+
+    .fifth-page .cover {
+        position: relative;
+        opacity: 0.8;
+        left: -5%;
+        width: 120%;
+        top: -5%;
+        height: 200%;
+    }
+
+    .fifth-page .cover-container {
+        overflow: hidden;
+        position: absolute;
+        max-width: 100%;
+        width: 100%;
+        object-fit: fill;
+        display: block;
+        height: 81%;
+        top: 5.64vw;
+    }
+
+    .sixth-page {
+
+        background-color: #373636;
+        background-image: url('CHTeam.png');
+        position: relative;
+        background-size: cover;
+        aspect-ratio: 16 / 9;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .sixth-page .chtitle {
+        position: absolute;
+        left: 16vw;
+        top: 1.2vw;
+        color: #FFF;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: bold;
+        font-size: 3vw;
+    }
+
+    .sixth-page .chp {
+        position: absolute;
+        left: 8vw;
+        top: 12vw;
+        transform: scaleX(1.25);
+        color: #FFF;
+        font-family: 'Arsenal', sans-serif;
+        font-style: normal;
+        font-size: 1.2vw;
+    }
+
+    .sixth-page .email {
+        position: absolute;
+        left: 3.7vw;
+        bottom: 15vw;
+        color: #FFF;
+        font-family: 'Helvetica World', Arial, sans-serif;
+        font-style: normal;
+        font-size: 1.4vw;
+    }
+
+    .sixth-page .whiteline {
+        width: 100%;
+        height: 0.3%;
+        margin-left: 3.7vw;
+        margin-right: 3.7vw;
+        background-color: #FFF;
+        position: relative;
+        bottom: -39.8vw;
+    }
+
+    .sixth-page .chlogo {
+        position: absolute;
+        left: 4vw;
+        top: 2vw;
+        width: 11vw;
+        height: 11vw;
+    }
+
+    .sixth-page .feedbacktitle {
+        font-family: 'Barlow Condensed', sans-serif;
+        color: #FEC64D;
+        font-size: 2.4vw;
+        position: relative;
+        left: 1.5vw;
+        top: 1.5vw;
+    }
+
+    .sixth-page .feedbackp {
+        color: #FFF;
+        font-family: 'Arsenal', sans-serif;
+        font-size: 1.2vw;
+        position: relative;
+        left: 1.5vw;
+        top: 1.2vw;
+    }
+
+    .sixth-page .feedbackthanks {
+        color: #FFF;
+        font-family: 'Arsenal', sans-serif;
+        font-size: 1.4vw;
+        position: relative;
+        left: 1.5vw;
+        top: 7vw;
+    }
+
+    .sixth-page .container {
+        position: absolute;
+        height: 72%;
+        width: 28%;
+        right: 0;
+        background-color: rgba(84, 84, 84, 0.7);
+        ;
+    }
+
+    .sixth-page .copyrights p {
+        font-family: 'Barlow Condensed', sans-serif;
+        color: #FFF;
+        font-size: 1.5vw;
+        top: 0;
+        position: relative;
+    }
+
+    .sixth-page .copyrights {
+        text-align: center;
+        align-content: center;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        height: 30%;
+        background-color: #545454;
+    }
+
+    .sixth-page .bottomnav .administrators {
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        width: 45vw;
+        height: 15vw;
+    }
+
+    .sixth-page .bottomnav {
+        position: absolute;
+        height: 28%;
+        width: 100%;
+        bottom: 0;
+        background-color: rgba(254, 198, 77, 0.7)
+    }
+
+    .sixth-page .socialcontainer {
+        position: absolute;
+        height: 10%;
+        width: 35%;
+        bottom: 1vw;
+        right: 1vw;
+    }
+
+    .sixth-page .socialcontainer p {
+        color: #FFF;
+        margin: 0%;
+        font-family: 'Helvetica World', sans-serif;
+        font-size: 1.6vw;
+        font-weight: bold;
+        position: relative;
+        left: 0vw;
+        margin-bottom: .5vw;
+        top: 0vw;
+    }
+
+    .sixth-page .socialcontainer .facebook:hover {
+        filter: brightness(110%);
+    }
+
+    .sixth-page .socialcontainer .twitter:hover {
+        filter: brightness(110%);
+    }
+
+    .sixth-page .socialcontainer .instagram:hover {
+        filter: brightness(110%);
+    }
+
+    .sixth-page .socialcontainer .facebook {
+        position: relative;
+        height: 2vw;
+        width: 2vw;
+        bottom: 0;
+        left: 0;
+    }
+
+    .sixth-page .socialcontainer .twitter {
+        position: relative;
+        height: 2vw;
+        width: 2vw;
+        bottom: 0;
+        left: 0;
+    }
+
+    .sixth-page .socialcontainer .instagram {
+        position: relative;
+        height: 2vw;
+        width: 2vw;
+        bottom: 0;
+        left: 0;
+    }
+
+    .sixth-page .fillsurvey:hover {
+        filter: brightness(110%);
+    }
+
+    .sixth-page .fillsurvey {
+        /*animation: fade-in-left 1.5s ease;*/
+        font-family: 'Bruno', Arial, sans-serif;
+        background-color: #FEC64D;
+        position: relative;
+        left: 5%;
+        font-size: 1.1vw;
+        font-weight: bold;
+        color: #FFF;
+        width: 17vw;
+        height: 3.5vw;
+        border-radius: 3vw;
+        top: 12%;
     }
 }
