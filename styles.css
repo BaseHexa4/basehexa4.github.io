@@ -685,10 +685,6 @@
         background-repeat: no-repeat;
     }
 
-    .third-page .luzon:hover {
-        opacity: 100;
-    }
-
     .third-page .luzon {
         opacity: 0;
         width: 29.5vw;
@@ -697,10 +693,6 @@
         position: relative;
         top: 6.6vw;
         left: 1.5vw;
-    }
-
-    .third-page .visayas:hover {
-        opacity: 100;
     }
 
     .third-page .visayas {
@@ -713,14 +705,12 @@
         right: -18.2vw;
     }
 
-    .third-page .mindanao:hover {
-        opacity: 100;
-    }
-
     .third-page .mindanao {
         opacity: 0;
-        width: 23.1vw;
+        width: 23vw;
         height: 16.8vw;
+        max-width: 23vw;
+        max-height: 16.8vw;
         z-index: 60;
         position: relative;
         top: -21.2vw;
