@@ -270,6 +270,7 @@
         position: absolute;
         z-index: 8888;
         right: 5%;
+        padding: 0;
         font-size: 1.4vw;
         font-weight: bold;
         color: #FFF;
@@ -348,6 +349,7 @@
         overflow: hidden;
         margin-right: 3vw;
         margin-left: 1vw;
+        display: flex;
     }
 
     .second-page .yellow-line {
@@ -358,6 +360,9 @@
 
 
     .list {
+        top: 0;
+        margin: 0;
+        position: relative;
         padding-top: 9vw;
         list-style: none;
         padding-left: 2vw;
@@ -841,7 +846,7 @@
         position: absolute;
         z-index: 8888;
         right: 50%;
-        transform: translate(50%,0);
+        transform: translate(50%, 0);
         font-size: 0.8vw;
         font-weight: bold;
         color: #FFF;
@@ -851,6 +856,7 @@
         border-radius: 3vw;
         bottom: 5%;
     }
+
     .fourth-page .side-view {
         width: 59.5%;
         height: 100%;
@@ -900,20 +906,28 @@
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
-        left: 28vw;
+        left: 25vw;
         width: 30vw;
         height: 30vw;
     }
 
     .fifth-page .chtitle {
         position: absolute;
-        top: 40%;
+        top: 42%;
+        width: 70%;
         transform: translate(-50%, -50%);
-        left: 65vw;
+        left: 75vw;
         color: #FFF;
         font-family: 'Barlow Condensed', sans-serif;
         font-weight: bold;
-        font-size: 7vw;
+        font-size: 5vw;
+    }
+
+    .fifth-page .chtitle .seperator {
+        width: 45%;
+        height: 2%;
+        position: absolute;
+        background-color: #FEC64D;
     }
 
     .fifth-page .cover {
@@ -957,7 +971,15 @@
         font-size: 3vw;
     }
 
+    .sixth-page .chtitle .seperator {
+        width: 75%;
+        height: 2%;
+        position: absolute;
+        background-color: #FEC64D;
+    }
+
     .sixth-page .chp {
+        padding: 0;
         position: absolute;
         left: 8vw;
         top: 12vw;
@@ -985,7 +1007,7 @@
         margin-right: 3.7vw;
         background-color: #FFF;
         position: relative;
-        bottom: -39.8vw;
+        bottom: -71.7%;
     }
 
     .sixth-page .chlogo {
@@ -997,6 +1019,7 @@
     }
 
     .sixth-page .feedbacktitle {
+        margin: 0;
         font-family: 'Barlow Condensed', sans-serif;
         color: #FEC64D;
         font-size: 2.4vw;
@@ -1007,6 +1030,7 @@
 
     .sixth-page .feedbackp {
         color: #FFF;
+        margin: 0;
         font-family: 'Arsenal', sans-serif;
         font-size: 1.2vw;
         position: relative;
@@ -1016,11 +1040,33 @@
 
     .sixth-page .feedbackthanks {
         color: #FFF;
+        margin: 0;
         font-family: 'Arsenal', sans-serif;
         font-size: 1.4vw;
-        position: relative;
-        left: 1.5vw;
-        top: 7vw;
+        position: absolute;
+        left: 1.7vw;
+        top: 50%;
+    }
+
+    .sixth-page .fillsurvey:hover {
+        filter: brightness(110%);
+    }
+
+    .sixth-page .fillsurvey {
+        /*animation: fade-in-left 1.5s ease;*/
+        margin: 0;
+        font-family: 'Bruno', Arial, sans-serif;
+        background-color: #FEC64D;
+        position: absolute;
+        left: 5%;
+        font-size: 1.1vw;
+        padding: 0;
+        font-weight: bold;
+        color: #FFF;
+        width: 17vw;
+        height: 3.5vw;
+        border-radius: 3vw;
+        top: 40%;
     }
 
     .sixth-page .container {
@@ -1029,7 +1075,6 @@
         width: 28%;
         right: 0;
         background-color: rgba(84, 84, 84, 0.7);
-        ;
     }
 
     .sixth-page .copyrights p {
@@ -1071,20 +1116,41 @@
         position: absolute;
         height: 10%;
         width: 35%;
-        bottom: 1vw;
-        right: 1vw;
+        bottom: 4%;
+        right: 3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
     }
 
     .sixth-page .socialcontainer p {
         color: #FFF;
+        position: relative;
         margin: 0%;
         font-family: 'Helvetica World', sans-serif;
         font-size: 1.6vw;
         font-weight: bold;
+        left: 0%;
+        margin-bottom: 8%;
+        top: 0%;
+    }
+
+    .sixth-page .socialcontainer .holder {
+        height: 2vw;
+        width: 100%;
         position: relative;
-        left: 0vw;
-        margin-bottom: .5vw;
-        top: 0vw;
+        display: flex;
+    }
+
+    .sixth-page .socialcontainer .facebook,
+    .sixth-page .socialcontainer .instagram,
+    .sixth-page .socialcontainer .twitter {
+        height: 2vw;
+        width: 2vw;
+        bottom: 0;
+        left: 0;
+        margin: 1.5%;
     }
 
     .sixth-page .socialcontainer .facebook:hover {
@@ -1099,46 +1165,4 @@
         filter: brightness(110%);
     }
 
-    .sixth-page .socialcontainer .facebook {
-        position: relative;
-        height: 2vw;
-        width: 2vw;
-        bottom: 0;
-        left: 0;
-    }
-
-    .sixth-page .socialcontainer .twitter {
-        position: relative;
-        height: 2vw;
-        width: 2vw;
-        bottom: 0;
-        left: 0;
-    }
-
-    .sixth-page .socialcontainer .instagram {
-        position: relative;
-        height: 2vw;
-        width: 2vw;
-        bottom: 0;
-        left: 0;
-    }
-
-    .sixth-page .fillsurvey:hover {
-        filter: brightness(110%);
-    }
-
-    .sixth-page .fillsurvey {
-        /*animation: fade-in-left 1.5s ease;*/
-        font-family: 'Bruno', Arial, sans-serif;
-        background-color: #FEC64D;
-        position: relative;
-        left: 5%;
-        font-size: 1.1vw;
-        font-weight: bold;
-        color: #FFF;
-        width: 17vw;
-        height: 3.5vw;
-        border-radius: 3vw;
-        top: 12%;
-    }
 }
