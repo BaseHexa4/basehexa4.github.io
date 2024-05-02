@@ -264,6 +264,7 @@
     }
 
     .first-page .visitpage {
+        border-width: 0;
         animation: fade-in-left 1.5s ease;
         font-family: 'Helvetica World', Arial, sans-serif;
         background-color: #FEC64D;
@@ -800,10 +801,22 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: rgba(254, 198, 77, 1);
+        background-image: url('./fourthpage/golden-animation.gif');
         background-repeat: no-repeat;
         background-size: cover;
         z-index: 1;
+        overflow: hidden;
+    }
+
+    .fourth-page .content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(218,156,76,0.6);
+        z-index: -1;
     }
 
     .fourth-page .chborder {
@@ -843,12 +856,15 @@
     .fourth-page .applych {
         font-family: 'Helvetica World', Arial, sans-serif;
         background-color: #242323;
+        margin: 0;
+        padding: 0;
         position: absolute;
         z-index: 8888;
         right: 50%;
         transform: translate(50%, 0);
         font-size: 0.8vw;
         font-weight: bold;
+        border-width: 0;
         color: #FFF;
         width: 8vw;
         height: 4vw;
@@ -906,7 +922,7 @@
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
-        left: 25vw;
+        left: 35vw;
         width: 30vw;
         height: 30vw;
     }
@@ -916,7 +932,7 @@
         top: 42%;
         width: 70%;
         transform: translate(-50%, -50%);
-        left: 75vw;
+        left: 85vw;
         color: #FFF;
         font-family: 'Barlow Condensed', sans-serif;
         font-weight: bold;
@@ -972,7 +988,7 @@
     }
 
     .sixth-page .chtitle .seperator {
-        width: 75%;
+        width: 100%;
         height: 2%;
         position: absolute;
         background-color: #FEC64D;
@@ -1054,13 +1070,14 @@
 
     .sixth-page .fillsurvey {
         /*animation: fade-in-left 1.5s ease;*/
+        border-width: 0;
         margin: 0;
+        padding: 0;
         font-family: 'Bruno', Arial, sans-serif;
         background-color: #FEC64D;
         position: absolute;
         left: 5%;
         font-size: 1.1vw;
-        padding: 0;
         font-weight: bold;
         color: #FFF;
         width: 17vw;
@@ -1109,7 +1126,22 @@
         height: 28%;
         width: 100%;
         bottom: 0;
-        background-color: rgba(254, 198, 77, 0.7)
+        background-image: url(./sixthpage/golden-animation.gif);
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    .sixth-page .bottomnav::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(145, 121, 85, 0.8);
+        z-index: -1;
     }
 
     .sixth-page .socialcontainer {
