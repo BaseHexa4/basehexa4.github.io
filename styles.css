@@ -10,6 +10,12 @@
     }
 }
 
+@keyframes bounce {
+    0% {
+        transform: translatex(-5px)
+    }
+}
+
 @keyframes fade-in-left {
     0% {
         opacity: 0;
@@ -261,6 +267,7 @@
 
     .first-page .visitpage:hover {
         filter: brightness(110%);
+        cursor: pointer;
     }
 
     .first-page .visitpage {
@@ -815,7 +822,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(218,156,76,0.6);
+        background-color: rgba(218, 156, 76, 0.6);
         z-index: -1;
     }
 
@@ -830,7 +837,7 @@
     }
 
     .fourth-page .blockview {
-        background-color: rgba(55, 55, 44, 0.8);
+        background-color: rgba(55, 54, 54, 0.5);
         width: 97%;
         left: 0.6vw;
         height: 50%;
@@ -851,6 +858,24 @@
         font-family: 'Arsenal', sans-serif;
         font-weight: normal;
         font-size: 1.4vw;
+    }
+
+    .fourth-page .blockview .joinhead {
+        position: absolute;
+        left: 6vw;
+        justify-content: center;
+        align-items: center;
+        top: 10vw;
+        transform: scaleX(1.25);
+        color: #FFF;
+        font-family: 'Arsenal', sans-serif;
+        font-weight: normal;
+        font-size: 1.2vw;
+    }
+
+    .fourth-page .applych:hover {
+        filter: brightness(110%);
+        cursor: pointer;
     }
 
     .fourth-page .applych {
@@ -1066,6 +1091,7 @@
 
     .sixth-page .fillsurvey:hover {
         filter: brightness(110%);
+        cursor: pointer;
     }
 
     .sixth-page .fillsurvey {
@@ -1187,14 +1213,66 @@
 
     .sixth-page .socialcontainer .facebook:hover {
         filter: brightness(110%);
+        cursor: pointer;
     }
 
     .sixth-page .socialcontainer .twitter:hover {
         filter: brightness(110%);
+        cursor: pointer;
     }
 
     .sixth-page .socialcontainer .instagram:hover {
         filter: brightness(110%);
+        cursor: pointer;
     }
 
+    .dots-wrapper ul {
+        list-style-type: none;
+        font-weight: bold;
+    }
+
+    .dots-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 40%;
+        /* Align the top of the element to the middle of the viewport */
+        transform: translateY(-50%);
+        right: 0;
+        position: fixed;
+        width: 1vw;
+        height: 3vw;
+        opacity: .95;
+        z-index: 99999999;
+    }
+
+    .dots-list {
+        width: 1vw;
+        height: 1vw;
+        position: absolute;
+        right: 0;
+        margin-right: 4vw;
+    }
+
+    .dots-list li {
+        width: 1vw;
+        height: 1vw;
+        border-radius: 50%;
+        border: solid 0.2vw #FFF;
+    }
+
+    .dot-2,
+    .dot-4,
+    .dot-6 {
+        margin-top: 0.4vw;
+        margin-bottom: 0.4vw;
+    }
+
+    .dots-active {
+        animation: bounce .5s 1;
+        width: 1vw;
+        height: 1vw;
+        background: #FEC64D;
+        border-radius: 50%;
+    }
 }
